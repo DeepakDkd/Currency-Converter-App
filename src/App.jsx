@@ -36,8 +36,8 @@ function App() {
         }}>
 
         <InputBox label="From" amount={amount} placehold="Enter Amount" currencyOptions={options} onCurrencyChange={(currency) => setFrom(currency)} onAmountChange={(amount) => setAmount(amount)} selectedCurrency={from} />
-        <button onClick={swap}>SWAP 🔃</button>
-
+        {/* <button onClick={swap}>SWAP 🔃</button> */}
+        <input type="button" onClick={swap} value={"SWAP"} />
         <InputBox label="To" placehold="0" currencyOptions={options} amount={convertedAmount} onCurrencyChange={(currency) => setTo(currency)} selectedCurrency={to}  amountDisabled />
 
         <button type='submit'>Convert {from.toUpperCase()} to {to.toUpperCase()}</button>
